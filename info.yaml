@@ -4,7 +4,8 @@ project:
   title: "SOMOS GALILEO " # Project title
   author: "Kevin Us" # Your name
   discord: "missael_17296" # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description: "Taller TinyTapeOut" # One line description of what your project does
+  description: "Controlador automatico de tinaco: deteccion de sensor dañado y proteccion contra trabajo en seco"
+  clock_hz: 10000
   language: "Wokwi" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz: 0 # Clock frequency in Hz (or 0 if not applicable)
 
@@ -14,25 +15,22 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
-  # Inputs
-  ui[0]: "IN0"
-  ui[1]: "IN1"
-  ui[2]: "IN2"
-  ui[3]: "IN3"
-  ui[4]: ""
-  ui[5]: ""
-  ui[6]: ""
-  ui[7]: ""
-
-  # Outputs
-  uo[0]: "EXTOUT0"
-  uo[1]: "EXTOUT1"
-  uo[2]: "EXTOUT2"
-  uo[3]: "EXTOUT3"
-  uo[4]: "EXTOUT4"
-  uo[5]: "EXTOUT5"
-  uo[6]: "EXTOUT6"
-  uo[7]: "EXTOUT7"
+#inputs
+  ui[0]: "level 25%"
+  ui[1]: "level 50%"
+  ui[2]: "level 75%"
+  ui[3]: "level 100%"
+  ui[4]: "cistern has water"
+  ui[5]: "manual fill"
+#outputs
+  uo[0]: "segment a"
+  uo[1]: "segment b"
+  uo[2]: "segment c"
+  uo[3]: "segment d"
+  uo[4]: "segment e"
+  uo[5]: "segment f"
+  uo[6]: "segment g"
+  uo[7]: "pump relay (dp)"
 
   # Bidirectional pins
   uio[0]: ""
